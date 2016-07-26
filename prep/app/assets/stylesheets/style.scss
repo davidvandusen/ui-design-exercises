@@ -1,0 +1,320 @@
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$theme-color-light: rgb(164, 221, 207);
+$theme-color-midlight: rgb(225, 122, 111);
+$theme-color-mid: rgb(109, 152, 170);
+$theme-color-middark: rgb(170, 109, 120);
+$theme-color-dark: rgb(41, 96, 119);
+
+$min-floors: 1;
+$max-floors: 4;
+$unit-rows: 3;
+$unit-cols: 4;
+
+body {
+  background: $theme-color-dark - 25;
+  color: rgb(255, 255, 255);
+  font-family: $base-font-family;
+  line-height: 1;
+}
+
+.building {
+  background: $theme-color-dark;
+  height: 50vw;
+  left: 2.5vw;
+  overflow: hidden;
+  position: fixed;
+  top: 2.5vw;
+  width: 95vw;
+
+  .building-info {
+    left: -5%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.25s;
+    width: 35%;
+
+    .building-built {
+      font-size: 2vw;
+      opacity: 0.5;
+    }
+
+    .building-floors {
+      margin-top: 2vw;
+
+      .building-floor {
+        background: rgba($theme-color-middark, 0.5);
+        color: rgba(255, 255, 255, 0.5);
+        display: inline-block;
+        font-size: 1.5vw;
+        height: 3vw;
+        line-height: 3vw;
+        position: relative;
+        text-align: center;
+        transition: 0.25s;
+        width: 3vw;
+
+        &.alert:after {
+          background: $theme-color-midlight;
+          border-radius: 50%;
+          content: '';
+          display: block;
+          height: 1vw;
+          position: absolute;
+          right: -0.125vw;
+          top: -0.125vw;
+          width: 1vw;
+        }
+
+        &:hover,
+        &.hover {
+          background: $theme-color-middark;
+          color: rgb(255, 255, 255);
+        }
+      }
+
+      .building-floors-heading {
+        font-size: 1.5vw;
+        margin-bottom: 0.5vw;
+      }
+    }
+
+    .building-name {
+      font-size: 4vw;
+      font-weight: bold;
+    }
+
+    .building-view & {
+      left: 5%;
+      opacity: 1;
+    }
+  }
+}
+
+@for $num-floors from $min-floors through $max-floors {
+  @for $i from 1 through $num-floors {
+    .floors-#{$num-floors} .floor:nth-child(#{$num-floors - $i + 1}) {
+      top: ((50% / ($num-floors + 1)) * $i);
+    }
+  }
+}
+
+.floor {
+  background: rgba($theme-color-middark, 0.75);
+  border: 1px solid $theme-color-middark;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  height: 25vw;
+  left: 45%;
+  opacity: 0.75;
+  position: absolute;
+  transform: rotateX(45deg) rotateZ(45deg) translateY(-5%);
+  transition: all 0.4s;
+  width: 47.5vw;
+
+  .floor-number {
+    bottom: 1vw;
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+    font-weight: bold;
+    left: 1vw;
+    line-height: 1;
+    opacity: 0;
+    position: absolute;
+    transition-duration: 0.25s;
+
+    sup {
+      font-size: 50%;
+      line-height: 1;
+    }
+
+    &:after {
+      content: 'floor';
+      display: block;
+      font-size: 1.25vw;
+      font-weight: normal;
+      opacity: 0.5;
+      text-transform: uppercase;
+    }
+  }
+
+  .building-view & {
+    &:hover,
+    &.hover {
+      opacity: 1;
+      transform: rotateX(45deg) rotateZ(45deg) translateY(5%);
+    }
+  }
+
+  .floor-view &,
+  .unit-view & {
+    opacity: 0;
+    transform: rotateX(45deg) rotateZ(45deg) translateY(-300%);
+
+    &.active {
+      height: 50vw;
+      left: 0;
+      opacity: 1;
+      top: 0;
+      transform: rotateX(0deg) rotateZ(0deg) translateY(0);
+      width: 95vw;
+
+      .floor-number {
+        bottom: 2vw;
+        font-size: 4vw;
+        left: 2vw;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.nav-main {
+  left: -5vw;
+  height: 55vw;
+  position: fixed;
+  top: 0;
+  transition-duration: 0.25s;
+  width: 5vw;
+
+  .back-button {
+    animation: button-shine 5s infinite;
+    background: linear-gradient(-110deg, rgba(0, 0, 0, 0.5) 45%, rgba(255, 255, 255, 0.5) 47.5%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.5) 52.5%, rgba(0, 0, 0, 0.5) 55%);
+    background-size: 1200% 1200%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+    font: bold 2vw/1 $base-font-family;
+    height: 5vw;
+    line-height: 5vw;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 2.5vw;
+    transition-duration: 0.25s;
+    width: 5vw;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.75);
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  .floor-view &,
+  .unit-view & {
+    left: 2.5vw;
+    transition-delay: 0.3s;
+  }
+}
+
+@for $row from 0 through ($unit-rows - 1) {
+  @for $col from 0 through ($unit-cols - 1) {
+    .unit:nth-child(#{$row * 4 + $col + 1}) {
+      left: $col * (100% / $unit-cols);
+      top: $row * (100% / $unit-rows);
+    }
+  }
+}
+
+.units {
+  bottom: 1vw;
+  left: 5vw;
+  position: absolute;
+  right: 1vw;
+  transition-duration: 0.25s;
+  top: 1vw;
+
+  .floor-view & {
+    bottom: 2vw;
+    left: 10vw;
+    right: 2vw;
+    top: 2vw;
+  }
+
+  .unit-view & {
+    bottom: 0;
+    left: 9vw;
+    right: 0;
+    top: 0;
+  }
+}
+
+.unit {
+  background: rgba($theme-color-midlight, 0.5);
+  border: 1px solid $theme-color-midlight;
+  box-sizing: border-box;
+  height: 33.333333%;
+  opacity: 0.5;
+  position: absolute;
+  transition-duration: 0.25s;
+  width: 25%;
+
+  .unit-details {
+    display: none;
+  }
+
+  .unit-number {
+    bottom: 1vw;
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+    font-weight: bold;
+    left: 1vw;
+    line-height: 1;
+    opacity: 0;
+    position: absolute;
+    transition: font-size 0.25s, margin-bottom 0.25s;
+
+    &:before {
+      content: '\2116';
+      font-weight: normal;
+      margin-right: 0.25vw;
+      opacity: 0.5;
+    }
+  }
+
+  .floor-view .floor.active & {
+    &:hover {
+      opacity: 1;
+    }
+
+    .unit-number {
+      opacity: 1;
+    }
+  }
+
+  .unit-view & {
+    opacity: 0;
+
+    &.active {
+      background: rgba($theme-color-midlight, 0);
+      border-color: rgba($theme-color-midlight, 0);
+      height: 100%;
+      left: 0;
+      opacity: 1;
+      top: 0;
+      width: 100%;
+
+      .unit-number {
+        font-size: 4vw;
+        margin-bottom: 2vw;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@keyframes button-shine {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}

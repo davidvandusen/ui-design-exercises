@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>CSS 3D Animation</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body class="building-view">
+<div id="building-container"></div>
+<nav class="nav-main">
+  <button class="back-button">&#x25c0;</button>
+</nav>
+<script id="building-template" type="text/x-handlebars-template">
+  <div class="building floors-{{building.floors.length}}">
+    <div class="building-info">
+      <div class="building-name">{{building.name}}</div>
+      <div class="building-built">Built {{building.built}}</div>
+      <div class="building-floors">
+        <div class="building-floors-heading">Floors</div>
+        <div class="building-floors-list">
+          {{#each building.floors}}
+            <div class="building-floor alert">{{number}}</div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="floors">
+      {{#each building.floors}}
+      <div class="floor">
+        <div class="floor-number">{{number}}<sup>{{ordinalSuffix number}}</sup></div>
+        <div class="units">
+          {{#each units}}
+          <div class="unit">
+            <div class="unit-number">{{number}}</div>
+            <div class="unit-details">
+              <div class="lease-expires">{{leaseExpires}}</div>
+              <div class="rent-due">{{rentDue}}</div>
+              <div class="occupants">
+                {{#each occupants}}
+                  <div class="occupant">
+                    <div class="occupant-name">{{name}}</div>
+                    <div class="occupant-phone">{{phone}}</div>
+                    <div class="occupant-email">{{email}}</div>
+                  </div>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</script>
+<script src="../vendor/javascripts/jquery.js"></script>
+<script src="../vendor/javascripts/handlebars.js"></script>
+<script src="javascripts/application.js"></script>
+</body>
+</html>
