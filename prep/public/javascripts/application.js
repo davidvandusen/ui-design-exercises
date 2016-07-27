@@ -1,4 +1,4 @@
-(function ($, Handlebars) {
+(function ($, Handlebars, moment) {
   const templates = {};
 
   function init() {
@@ -7,28 +7,42 @@
   }
 
   function configureHandlebars() {
+    Handlebars.registerHelper('date', function (value) {
+      return moment(value).format('LL');
+    });
+
     Handlebars.registerHelper('ordinalSuffix', (function (ordinalSuffixes, number) {
       return ordinalSuffixes[number % 10];
     }).bind(null, ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th']));
 
-    Handlebars.registerHelper('rentDue', function (unit) {
-      return (new Date()).getTime() - (new Date(unit.rentDue)).getTime() > 0;
+    Handlebars.registerHelper('isRentDue', function (unit) {
+      return moment().isAfter(unit.rentDue);
     });
 
-    Handlebars.registerHelper('leaseExpiring', function (unit) {
-      var now = new Date();
-      var leaseExpires = new Date(unit.leaseExpires);
-      var yearDiff = leaseExpires.getUTCFullYear() - now.getUTCFullYear();
-      var monthDiff = leaseExpires.getUTCMonth() - now.getUTCMonth() + (yearDiff * 12);
-      return monthDiff <= 2;
+    Handlebars.registerHelper('isLeaseExpiring', function (unit) {
+      return moment().startOf('month').add(3, 'months').isAfter(unit.leaseExpires);
     });
 
     Handlebars.registerHelper('hasAlerts', function (unit) {
-      return Handlebars.helpers.rentDue(unit) || Handlebars.helpers.leaseExpiring(unit);
+      return Handlebars.helpers.isRentDue(unit) || Handlebars.helpers.isLeaseExpiring(unit);
     });
 
     Handlebars.registerHelper('hasAlertsClass', function (units) {
-      return units.filter(Handlebars.helpers.hasAlerts).length ? 'alert' : '';
+      var hasAlerts;
+      if (units instanceof Array) {
+        hasAlerts = units.filter(Handlebars.helpers.hasAlerts).length;
+      } else {
+        hasAlerts = Handlebars.helpers.hasAlerts(this);
+      }
+      return hasAlerts ? 'alert' : '';
+    });
+
+    Handlebars.registerHelper('isLeaseExpiringClass', function () {
+      return Handlebars.helpers.isLeaseExpiring(this) ? 'alert' : '';
+    });
+
+    Handlebars.registerHelper('isRentDueClass', function () {
+      return Handlebars.helpers.isRentDue(this) ? 'alert' : '';
     });
 
     Handlebars.registerHelper('count', function (list, helper) {
@@ -158,4 +172,4 @@
   }
 
   $(init);
-})(jQuery, Handlebars);
+})(jQuery, Handlebars, moment);

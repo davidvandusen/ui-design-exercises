@@ -1,3 +1,7 @@
+a {
+  color: #a4ddcf;
+  text-decoration: none; }
+
 body {
   background: #10475e;
   color: white;
@@ -7,6 +11,18 @@ body {
 sup {
   font-size: 66.666667%;
   line-height: 1; }
+
+.badge, .building .building-info .building-floors .building-floor.alert .building-floor-number:after, .unit .unit-details .unit-details-admin .unit-details-admin-item.alert:after, .floor-view .floor.active .unit.alert:after {
+  background: #e17a6f;
+  border: 0.01vw solid #c86156;
+  border-radius: 50%;
+  box-shadow: 0 0.02vw 0.02vw rgba(0, 0, 0, 0.1);
+  display: block;
+  height: 1vw;
+  position: absolute;
+  right: -0.25vw;
+  top: -0.25vw;
+  width: 1vw; }
 
 .building {
   background: #296077;
@@ -66,6 +82,7 @@ sup {
           width: 2.5vw; }
       .building .building-info .building-floors .building-floor .building-floor-number {
         background: rgba(170, 109, 120, 0.5);
+        border: 1px solid rgba(170, 109, 120, 0.5);
         color: rgba(255, 255, 255, 0.5);
         float: left;
         font-size: 1.5vw;
@@ -77,19 +94,12 @@ sup {
         transition: 0.25s;
         width: 3vw; }
       .building .building-info .building-floors .building-floor.alert .building-floor-number:after {
-        background: #e17a6f;
-        border-radius: 50%;
-        content: '';
-        display: block;
-        height: 1vw;
-        position: absolute;
-        right: -0.125vw;
-        top: -0.125vw;
-        width: 1vw; }
+        content: ''; }
       .building .building-info .building-floors .building-floor:hover .building-floor-details, .building .building-info .building-floors .building-floor.hover .building-floor-details {
         display: block; }
       .building .building-info .building-floors .building-floor:hover .building-floor-number, .building .building-info .building-floors .building-floor.hover .building-floor-number {
         background: #aa6d78;
+        border-color: #a4ddcf;
         color: white; }
       .building .building-info .building-floors .building-floors-heading {
         font-size: 1.5vw;
@@ -163,6 +173,7 @@ sup {
       opacity: 0.5;
       text-transform: uppercase; }
   .building-view .floor:hover, .building-view .floor.hover {
+    border-color: #a4ddcf;
     opacity: 1;
     transform: rotateX(45deg) rotateZ(45deg) translateY(5%); }
   .floor-view .floor, .unit-view .floor {
@@ -281,35 +292,90 @@ sup {
     top: 0; }
 
 .unit {
-  background: rgba(225, 122, 111, 0.5);
-  border: 1px solid #e17a6f;
+  background: rgba(225, 122, 111, 0.25);
+  border: 1px solid rgba(225, 122, 111, 0.5);
   box-sizing: border-box;
   height: 33.333333%;
-  opacity: 0.5;
   position: absolute;
   transition-duration: 0.25s;
   width: 25%; }
   .unit .unit-details {
-    display: none; }
+    bottom: 8vw;
+    left: 1vw;
+    opacity: 0;
+    position: absolute;
+    right: 1vw;
+    top: 1vw;
+    visibility: hidden; }
+    .unit .unit-details .unit-details-admin {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50%; }
+      .unit .unit-details .unit-details-admin .unit-details-admin-item {
+        background: rgba(0, 0, 0, 0.25);
+        border: 1px solid transparent;
+        color: white;
+        font-size: 1.75vw;
+        font-weight: 200;
+        margin: 1vw 4vw 1vw 2vw;
+        padding: 2vw;
+        position: relative;
+        transition: 0.25s; }
+        .unit .unit-details .unit-details-admin .unit-details-admin-item.alert:after {
+          content: ''; }
+        .unit .unit-details .unit-details-admin .unit-details-admin-item:hover {
+          background: rgba(0, 0, 0, 0.3);
+          border: 1px solid rgba(0, 0, 0, 0.2); }
+        .unit .unit-details .unit-details-admin .unit-details-admin-item .label {
+          color: #6d98aa;
+          display: inline-block;
+          font-weight: bold;
+          width: 40%; }
+    .unit .unit-details .unit-details-occupants {
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50%; }
+      .unit .unit-details .unit-details-occupants .occupants-heading {
+        font-size: 1.5vw;
+        margin-bottom: 2vw; }
+      .unit .unit-details .unit-details-occupants .occupant-item {
+        margin-top: 1vw; }
+        .unit .unit-details .unit-details-occupants .occupant-item .occupant-name {
+          font-size: 2vw;
+          margin-bottom: 1vw; }
+        .unit .unit-details .unit-details-occupants .occupant-item .occupant-detail {
+          font-size: 1.5vw;
+          margin-top: 0.5vw; }
   .unit .unit-number {
     bottom: 1vw;
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
     font-size: 2vw;
     font-weight: bold;
     left: 1vw;
     line-height: 1;
     opacity: 0;
     position: absolute;
-    transition: font-size 0.25s, margin-bottom 0.25s; }
+    transition: font-size 0.25s, margin-bottom 0.25s, color 0.25s; }
     .unit .unit-number:before {
       content: '\2116';
       font-weight: normal;
       margin-right: 0.25vw;
       opacity: 0.5; }
   .floor-view .floor.active .unit:hover {
-    opacity: 1; }
+    background: rgba(225, 122, 111, 0.5);
+    border-color: #a4ddcf; }
+    .floor-view .floor.active .unit:hover .unit-number {
+      color: white; }
   .floor-view .floor.active .unit .unit-number {
     opacity: 1; }
+  .floor-view .floor.active .unit.alert:after {
+    content: '';
+    right: 0.25vw;
+    top: 0.25vw; }
   .unit-view .unit {
     opacity: 0; }
     .unit-view .unit.active {
@@ -319,7 +385,12 @@ sup {
       left: 0;
       opacity: 1;
       top: 0;
-      width: 100%; }
+      width: 100%;
+      z-index: 1; }
+      .unit-view .unit.active .unit-details {
+        opacity: 1;
+        transition: visibility 0s 0.25s, opacity 0.25s 0.25s;
+        visibility: visible; }
       .unit-view .unit.active .unit-number {
         font-size: 4vw;
         margin-bottom: 2vw;

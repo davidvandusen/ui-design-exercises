@@ -24,8 +24,8 @@
               <div class="building-floor-number">{{number}}</div>
               <div class="building-floor-details">
                 <div class="floor-number-label">{{number}}<sup>{{ordinalSuffix number}}</sup> floor <span class="extra-info">({{units.length}} units)</span></div>
-                <div class="floor-units-rent-overdue"><span class="value">{{count units 'rentDue'}}</span> rents due</div>
-                <div class="floor-units-lease-expiring"><span class="value">{{count units 'leaseExpiring'}}</span> leases expiring</div>
+                <div class="floor-units-rent-overdue"><span class="value">{{count units 'isRentDue'}}</span> rents due</div>
+                <div class="floor-units-lease-expiring"><span class="value">{{count units 'isLeaseExpiring'}}</span> leases expiring</div>
               </div>
             </div>
           {{/each}}
@@ -38,19 +38,24 @@
         <div class="floor-number">{{number}}<sup>{{ordinalSuffix number}}</sup></div>
         <div class="units">
           {{#each units}}
-          <div class="unit">
+          <div class="unit {{hasAlertsClass}}">
             <div class="unit-number">{{number}}</div>
             <div class="unit-details">
-              <div class="lease-expires">{{leaseExpires}}</div>
-              <div class="rent-due">{{rentDue}}</div>
-              <div class="occupants">
-                {{#each occupants}}
-                  <div class="occupant">
+              <div class="unit-details-occupants">
+                <div class="occupants-heading">Occupants</div>
+                <div class="occupants-list">
+                  {{#each occupants}}
+                  <div class="occupant-item">
                     <div class="occupant-name">{{name}}</div>
-                    <div class="occupant-phone">{{phone}}</div>
-                    <div class="occupant-email">{{email}}</div>
+                    <div class="occupant-detail"><a href="callto:{{phone}}">{{phone}}</a></div>
+                    <div class="occupant-detail"><a href="mailto:{{email}}">{{email}}</a></div>
                   </div>
-                {{/each}}
+                  {{/each}}
+                </div>
+              </div>
+              <div class="unit-details-admin">
+                <div class="unit-details-admin-item {{isLeaseExpiringClass}}"><span class="label">Lease expires</span> {{date leaseExpires}}</div>
+                <div class="unit-details-admin-item {{isRentDueClass}}"><span class="label">Rent due</span> {{date rentDue}}</div>
               </div>
             </div>
           </div>
@@ -62,6 +67,7 @@
   </div>
 </script>
 <script src="../vendor/javascripts/jquery.js"></script>
+<script src="../vendor/javascripts/moment.js"></script>
 <script src="../vendor/javascripts/handlebars.js"></script>
 <script src="javascripts/application.js"></script>
 </body>
