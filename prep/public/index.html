@@ -15,11 +15,19 @@
     <div class="building-info">
       <div class="building-name">{{building.name}}</div>
       <div class="building-built">Built {{building.built}}</div>
+      <div class="building-address">{{building.address}}</div>
       <div class="building-floors">
         <div class="building-floors-heading">Floors</div>
         <div class="building-floors-list">
           {{#each building.floors}}
-            <div class="building-floor alert">{{number}}</div>
+            <div class="building-floor {{hasAlertsClass units}}">
+              <div class="building-floor-number">{{number}}</div>
+              <div class="building-floor-details">
+                <div class="floor-number-label">{{number}}<sup>{{ordinalSuffix number}}</sup> floor <span class="extra-info">({{units.length}} units)</span></div>
+                <div class="floor-units-rent-overdue"><span class="value">{{count units 'rentDue'}}</span> rents due</div>
+                <div class="floor-units-lease-expiring"><span class="value">{{count units 'leaseExpiring'}}</span> leases expiring</div>
+              </div>
+            </div>
           {{/each}}
         </div>
       </div>

@@ -11,6 +11,30 @@
       return ordinalSuffixes[number % 10];
     }).bind(null, ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th']));
 
+    Handlebars.registerHelper('rentDue', function (unit) {
+      return (new Date()).getTime() - (new Date(unit.rentDue)).getTime() > 0;
+    });
+
+    Handlebars.registerHelper('leaseExpiring', function (unit) {
+      var now = new Date();
+      var leaseExpires = new Date(unit.leaseExpires);
+      var yearDiff = leaseExpires.getUTCFullYear() - now.getUTCFullYear();
+      var monthDiff = leaseExpires.getUTCMonth() - now.getUTCMonth() + (yearDiff * 12);
+      return monthDiff <= 2;
+    });
+
+    Handlebars.registerHelper('hasAlerts', function (unit) {
+      return Handlebars.helpers.rentDue(unit) || Handlebars.helpers.leaseExpiring(unit);
+    });
+
+    Handlebars.registerHelper('hasAlertsClass', function (units) {
+      return units.filter(Handlebars.helpers.hasAlerts).length ? 'alert' : '';
+    });
+
+    Handlebars.registerHelper('count', function (list, helper) {
+      return list.filter(Handlebars.helpers[helper]).length;
+    });
+
     templates.building = Handlebars.compile($('#building-template').html());
   }
 

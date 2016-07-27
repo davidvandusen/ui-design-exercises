@@ -1,3 +1,5 @@
+"use strict";
+
 const fs = require('fs');
 const faker = require('faker');
 const moment = require('moment');
@@ -8,15 +10,16 @@ const unitsPerFloor = 12;
 const building = {
   name: 'Lighthouse Tower',
   built: 2014,
+  address: '128 W. Hastings St.\nVancouver, BC',
   floors: []
 };
 
-for (var floorNum = 0; floorNum < numFloors; floorNum++) {
+for (let floorNum = 0; floorNum < numFloors; floorNum++) {
   building.floors[floorNum] = {
     number: floorNum + 1,
     units: []
   };
-  for (var unitNum = 0; unitNum < unitsPerFloor; unitNum++) {
+  for (let unitNum = 0; unitNum < unitsPerFloor; unitNum++) {
     building.floors[floorNum].units[unitNum] = {
       number: (floorNum + 1) * 100 + unitNum + 1,
       occupants: [{
@@ -31,4 +34,4 @@ for (var floorNum = 0; floorNum < numFloors; floorNum++) {
   }
 }
 
-fs.writeFile('public/building.json', JSON.stringify(building, null, 2));
+fs.writeFile('public/data/building.json', JSON.stringify(building, null, 2));

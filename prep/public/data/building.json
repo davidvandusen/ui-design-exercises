@@ -1,6 +1,7 @@
 {
   "name": "Lighthouse Tower",
   "built": 2014,
+  "address": "128 W. Hastings St.\nVancouver, BC",
   "floors": [
     {
       "number": 1,
@@ -9,145 +10,157 @@
           "number": 101,
           "occupants": [
             {
-              "name": "Keagan Sporer",
-              "phone": "430.028.9222 x7907",
-              "email": "Anne61@gmail.com"
+              "name": "Phoebe Conn",
+              "phone": "(696) 509-5321 x9228",
+              "email": "Werner_Murphy89@gmail.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2017-01-01T08:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2017-02-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 102,
           "occupants": [
             {
-              "name": "Myra Mraz",
-              "phone": "1-416-465-6568 x95031",
-              "email": "Novella81@gmail.com"
+              "name": "Greta Gottlieb",
+              "phone": "1-188-173-3432 x91203",
+              "email": "Zaria.Hane@hotmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2016-12-01T08:00:00.000Z"
+          "leaseExpires": "2016-10-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 103,
           "occupants": [
             {
-              "name": "Pat Wiegand IV",
-              "phone": "113-487-2383",
-              "email": "Adrianna.Lang@hotmail.com"
+              "name": "Sarai Wisoky II",
+              "phone": "(264) 296-4113",
+              "email": "Conner.Yundt41@hotmail.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2017-07-01T07:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2017-01-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 104,
           "occupants": [
             {
-              "name": "Samson Kuhlman",
-              "phone": "603-213-6884",
-              "email": "Skylar_McKenzie76@yahoo.com"
+              "name": "Jessyca Gutmann",
+              "phone": "475-724-5488 x912",
+              "email": "Florencio.Kuhic@yahoo.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2016-10-01T07:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2016-11-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 105,
           "occupants": [
             {
-              "name": "Stewart Gerhold",
-              "phone": "1-517-807-2522",
-              "email": "Delphine.Dach31@gmail.com"
+              "name": "Paula Swaniawski",
+              "phone": "206-254-3289 x414",
+              "email": "Erica_Schneider84@hotmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2016-09-01T07:00:00.000Z"
+          "leaseExpires": "2016-12-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 106,
           "occupants": [
             {
-              "name": "Dr. Colleen Murphy",
-              "phone": "731.698.9822 x237",
-              "email": "Sienna12@yahoo.com"
+              "name": "Aurore Hauck III",
+              "phone": "(449) 583-4393 x659",
+              "email": "Adelle_Predovic9@gmail.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2016-12-01T08:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2016-10-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 107,
           "occupants": [
             {
-              "name": "Nikki Crona",
-              "phone": "970.361.5455",
-              "email": "Miller.Blanda@hotmail.com"
+              "name": "Esperanza Schuppe",
+              "phone": "586-777-7636",
+              "email": "Wayne42@gmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-01-01T08:00:00.000Z"
+          "leaseExpires": "2017-06-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 108,
           "occupants": [
             {
-              "name": "Fannie Jast",
-              "phone": "790.025.7681",
-              "email": "Deshaun59@hotmail.com"
+              "name": "Rafaela Runte",
+              "phone": "760.354.8545",
+              "email": "Mitchell.Bosco@gmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2016-11-01T07:00:00.000Z"
+          "leaseExpires": "2017-03-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 109,
           "occupants": [
             {
-              "name": "Vincent Mayer",
-              "phone": "(155) 088-2658",
-              "email": "Lizzie_DuBuque@yahoo.com"
+              "name": "Dolores Goyette",
+              "phone": "(605) 391-2526 x93466",
+              "email": "Destinee.Huel57@gmail.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2016-12-01T08:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2016-11-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 110,
           "occupants": [
             {
-              "name": "Rowena Witting",
-              "phone": "1-117-875-8753",
-              "email": "Arnulfo_Cole8@hotmail.com"
+              "name": "Joshuah Heidenreich",
+              "phone": "813-847-7472",
+              "email": "Helga_Gibson47@yahoo.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2017-04-01T07:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2017-06-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 111,
           "occupants": [
             {
-              "name": "Edyth Lowe",
-              "phone": "596.124.2158",
-              "email": "Warren_Hilll49@yahoo.com"
+              "name": "Autumn Kub",
+              "phone": "(433) 912-0566",
+              "email": "Rowan.Green@gmail.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2017-02-01T08:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2016-10-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 112,
           "occupants": [
             {
-              "name": "Marion Anderson PhD",
-              "phone": "(627) 945-8606",
-              "email": "Clinton.Hilll25@hotmail.com"
+              "name": "Reymundo Armstrong",
+              "phone": "1-887-153-3338 x6692",
+              "email": "Aron.Gibson51@gmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-01-01T08:00:00.000Z"
+          "leaseExpires": "2017-03-01T08:00:00.000Z",
+          "serviceRequests": []
         }
       ]
     },
@@ -158,145 +171,157 @@
           "number": 201,
           "occupants": [
             {
-              "name": "Griffin Jacobi",
-              "phone": "964-331-6465",
-              "email": "Ollie.Mayer24@gmail.com"
+              "name": "Mr. Gwendolyn Fay",
+              "phone": "1-383-563-9392 x510",
+              "email": "Arnaldo_Beahan@yahoo.com"
             }
           ],
-          "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-07-01T07:00:00.000Z"
+          "rentDue": "2016-07-01T07:00:00.000Z",
+          "leaseExpires": "2017-03-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 202,
           "occupants": [
             {
-              "name": "Miss Ceasar Sanford",
-              "phone": "035.749.4010 x814",
-              "email": "Gudrun87@gmail.com"
+              "name": "Juwan Streich V",
+              "phone": "(749) 197-0563 x062",
+              "email": "Noelia_Wilkinson@hotmail.com"
             }
           ],
           "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2017-07-01T07:00:00.000Z"
+          "leaseExpires": "2016-12-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 203,
           "occupants": [
             {
-              "name": "Marietta Sipes",
-              "phone": "1-194-986-8211",
-              "email": "Delmer.Leffler@yahoo.com"
+              "name": "Arjun Huel",
+              "phone": "1-678-997-9376",
+              "email": "Lewis80@gmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-02-01T08:00:00.000Z"
+          "leaseExpires": "2016-09-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 204,
           "occupants": [
             {
-              "name": "Dwight Brown",
-              "phone": "654.378.9410 x2607",
-              "email": "Mike_Monahan@gmail.com"
+              "name": "Dr. Annabelle Hoppe",
+              "phone": "465.868.7046 x59887",
+              "email": "Chloe24@hotmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-06-01T07:00:00.000Z"
+          "leaseExpires": "2016-12-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 205,
           "occupants": [
             {
-              "name": "Mrs. Iva Baumbach",
-              "phone": "716.828.4722",
-              "email": "Berniece.Zemlak@gmail.com"
+              "name": "Vincent Casper V",
+              "phone": "1-693-679-0390 x2728",
+              "email": "Xander.Bosco@yahoo.com"
             }
           ],
           "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2016-12-01T08:00:00.000Z"
+          "leaseExpires": "2017-01-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 206,
           "occupants": [
             {
-              "name": "Marisa Smith",
-              "phone": "104.454.7691 x4526",
-              "email": "Davonte_Treutel26@hotmail.com"
+              "name": "Jackson Kiehn",
+              "phone": "512-780-7093 x6360",
+              "email": "Ima22@yahoo.com"
             }
           ],
           "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2016-11-01T07:00:00.000Z"
+          "leaseExpires": "2017-02-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 207,
           "occupants": [
             {
-              "name": "Evalyn Homenick",
-              "phone": "602.699.1080",
-              "email": "Timmothy_Sauer56@hotmail.com"
+              "name": "Dangelo Wuckert",
+              "phone": "910-397-2059 x09997",
+              "email": "Enola16@hotmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2016-08-01T07:00:00.000Z"
+          "leaseExpires": "2016-12-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 208,
           "occupants": [
             {
-              "name": "Velva Goldner",
-              "phone": "442-820-0125 x072",
-              "email": "Leila_Smitham@yahoo.com"
+              "name": "Orpha Nicolas II",
+              "phone": "464-933-4870 x2299",
+              "email": "Lelia.Wilkinson58@gmail.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2017-06-01T07:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2017-03-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 209,
           "occupants": [
             {
-              "name": "King Abernathy",
-              "phone": "496-699-7790 x44217",
-              "email": "Elijah.Romaguera31@hotmail.com"
+              "name": "Arielle McGlynn",
+              "phone": "221.773.8009 x0514",
+              "email": "Durward26@gmail.com"
             }
           ],
-          "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-06-01T07:00:00.000Z"
+          "rentDue": "2016-07-01T07:00:00.000Z",
+          "leaseExpires": "2016-10-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 210,
           "occupants": [
             {
-              "name": "Jaydon Kuhlman",
-              "phone": "255.258.4414 x1089",
-              "email": "Addie.Corwin@yahoo.com"
+              "name": "Jarod Hyatt",
+              "phone": "713.324.4986",
+              "email": "Krystina45@gmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-03-01T08:00:00.000Z"
+          "leaseExpires": "2016-09-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 211,
           "occupants": [
             {
-              "name": "Myra Powlowski",
-              "phone": "1-086-839-3341 x33202",
-              "email": "Erica_Fay25@yahoo.com"
+              "name": "Maribel Heathcote Sr.",
+              "phone": "063-915-6457",
+              "email": "Nicklaus.Hansen51@gmail.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2017-05-01T07:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2017-03-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 212,
           "occupants": [
             {
-              "name": "Ms. Leonora Cartwright",
-              "phone": "009-616-3179",
-              "email": "Vicente_Barrows98@hotmail.com"
+              "name": "Scot Collins",
+              "phone": "(953) 435-0693",
+              "email": "Krystal28@hotmail.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2017-04-01T07:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2016-09-01T07:00:00.000Z",
+          "serviceRequests": []
         }
       ]
     },
@@ -307,145 +332,157 @@
           "number": 301,
           "occupants": [
             {
-              "name": "Andy Wintheiser",
-              "phone": "1-745-954-0663 x4091",
-              "email": "Sabryna31@yahoo.com"
+              "name": "Monique Schoen MD",
+              "phone": "233-432-0756",
+              "email": "Dedric30@yahoo.com"
             }
           ],
           "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2017-06-01T07:00:00.000Z"
+          "leaseExpires": "2016-08-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 302,
           "occupants": [
             {
-              "name": "Taryn Hansen",
-              "phone": "1-951-294-2675",
-              "email": "Kari.Waelchi35@gmail.com"
+              "name": "Mrs. Marshall Jacobson",
+              "phone": "877-859-2455 x6921",
+              "email": "Otis0@yahoo.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-04-01T07:00:00.000Z"
+          "leaseExpires": "2017-01-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 303,
           "occupants": [
             {
-              "name": "Lyda Hamill",
-              "phone": "(312) 510-3355 x35981",
-              "email": "Otis.Beatty70@yahoo.com"
+              "name": "Terry Moore",
+              "phone": "428-508-7405 x5076",
+              "email": "Wilhelm70@gmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2016-12-01T08:00:00.000Z"
+          "leaseExpires": "2017-04-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 304,
           "occupants": [
             {
-              "name": "Zetta Mann PhD",
-              "phone": "370-802-6594 x6858",
-              "email": "Emery37@hotmail.com"
+              "name": "Cicero Kutch",
+              "phone": "1-733-689-9150",
+              "email": "Rosetta49@yahoo.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2016-08-01T07:00:00.000Z"
+          "leaseExpires": "2017-02-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 305,
           "occupants": [
             {
-              "name": "Tremayne Grady",
-              "phone": "(479) 811-9871",
-              "email": "Verlie_Bode1@yahoo.com"
+              "name": "Haskell Hirthe",
+              "phone": "1-373-747-0347",
+              "email": "Cyril.Morissette96@yahoo.com"
             }
           ],
-          "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-04-01T07:00:00.000Z"
+          "rentDue": "2016-07-01T07:00:00.000Z",
+          "leaseExpires": "2017-06-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 306,
           "occupants": [
             {
-              "name": "Skye Konopelski",
-              "phone": "531-942-3617 x9209",
-              "email": "Drew.Zboncak@gmail.com"
+              "name": "Brock Streich V",
+              "phone": "777.010.8971",
+              "email": "Dangelo_Johnson@hotmail.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2016-09-01T07:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2017-01-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 307,
           "occupants": [
             {
-              "name": "Kim Boyle",
-              "phone": "058-540-0544",
-              "email": "Santino16@yahoo.com"
+              "name": "Harmon Feeney IV",
+              "phone": "1-261-380-4885",
+              "email": "Josiah57@gmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2016-08-01T07:00:00.000Z"
+          "leaseExpires": "2017-05-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 308,
           "occupants": [
             {
-              "name": "Nelson Considine",
-              "phone": "1-240-118-7034",
-              "email": "Aryanna4@yahoo.com"
+              "name": "Maddison Schimmel",
+              "phone": "016.473.6667 x5192",
+              "email": "Darren_Hegmann@hotmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-02-01T08:00:00.000Z"
+          "leaseExpires": "2016-09-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 309,
           "occupants": [
             {
-              "name": "Deborah Borer",
-              "phone": "1-271-641-2191 x385",
-              "email": "Keaton_Pagac@hotmail.com"
+              "name": "Carole Bailey",
+              "phone": "175.422.4913 x8970",
+              "email": "Reece_Kihn11@gmail.com"
             }
           ],
-          "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2016-08-01T07:00:00.000Z"
+          "rentDue": "2016-07-01T07:00:00.000Z",
+          "leaseExpires": "2017-07-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 310,
           "occupants": [
             {
-              "name": "Onie Smitham",
-              "phone": "441.042.9895",
-              "email": "Erica27@gmail.com"
+              "name": "Mazie Hoeger",
+              "phone": "496.553.4346 x8060",
+              "email": "Malinda.Torp@hotmail.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2016-10-01T07:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2016-09-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 311,
           "occupants": [
             {
-              "name": "Lisandro Runte",
-              "phone": "(431) 576-4051",
-              "email": "Johnpaul.Flatley@gmail.com"
+              "name": "Gardner Hansen DDS",
+              "phone": "1-239-493-9033",
+              "email": "Krystina.Okuneva86@yahoo.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2017-03-01T08:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2016-10-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 312,
           "occupants": [
             {
-              "name": "Juliana Schoen",
-              "phone": "021.382.2891 x12683",
-              "email": "Genevieve13@yahoo.com"
+              "name": "Linda Maggio",
+              "phone": "1-629-556-5089",
+              "email": "Harvey.Franecki@yahoo.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-06-01T07:00:00.000Z"
+          "leaseExpires": "2016-08-01T07:00:00.000Z",
+          "serviceRequests": []
         }
       ]
     },
@@ -456,145 +493,79 @@
           "number": 401,
           "occupants": [
             {
-              "name": "Melisa Blick",
-              "phone": "059-953-7262 x55800",
-              "email": "Jessyca.Toy10@hotmail.com"
+              "name": "Ibrahim Towne",
+              "phone": "(950) 432-4673",
+              "email": "Ericka_Mante@gmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-04-01T07:00:00.000Z"
+          "leaseExpires": "2016-10-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 402,
           "occupants": [
             {
-              "name": "Maximillian Nader",
-              "phone": "(475) 793-9204 x0112",
-              "email": "Ibrahim.Schmidt61@yahoo.com"
+              "name": "Janis Turner",
+              "phone": "1-124-769-5253",
+              "email": "Stanton89@gmail.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2016-12-01T08:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2017-04-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 403,
           "occupants": [
             {
-              "name": "Julio Boyer MD",
-              "phone": "1-357-817-4752 x3917",
-              "email": "Asha34@gmail.com"
+              "name": "Reyna Bahringer",
+              "phone": "053-402-0457 x13458",
+              "email": "Eliezer35@hotmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-07-01T07:00:00.000Z"
+          "leaseExpires": "2017-05-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 404,
           "occupants": [
             {
-              "name": "Genesis Murazik",
-              "phone": "1-038-366-1376 x474",
-              "email": "Marjory_Volkman76@gmail.com"
+              "name": "Raina Boyle",
+              "phone": "198.141.5043",
+              "email": "Miguel.Gerhold@gmail.com"
             }
           ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2016-09-01T07:00:00.000Z"
+          "rentDue": "2016-08-01T07:00:00.000Z",
+          "leaseExpires": "2017-06-01T07:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 405,
           "occupants": [
             {
-              "name": "Esta Jenkins",
-              "phone": "(154) 153-3859",
-              "email": "Marina_Reynolds40@hotmail.com"
+              "name": "Katelin Bednar",
+              "phone": "1-011-714-0872 x6282",
+              "email": "Athena_Jaskolski66@gmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-01-01T08:00:00.000Z"
+          "leaseExpires": "2017-01-01T08:00:00.000Z",
+          "serviceRequests": []
         },
         {
           "number": 406,
           "occupants": [
             {
-              "name": "Lysanne Hand",
-              "phone": "(294) 860-5517 x018",
-              "email": "Chyna_Wisozk59@hotmail.com"
+              "name": "Hallie Schoen III",
+              "phone": "(326) 624-2565",
+              "email": "Vincenza70@hotmail.com"
             }
           ],
           "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-05-01T07:00:00.000Z"
-        },
-        {
-          "number": 407,
-          "occupants": [
-            {
-              "name": "Evelyn Murphy",
-              "phone": "(758) 333-3918",
-              "email": "Precious.Schiller@hotmail.com"
-            }
-          ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2017-02-01T08:00:00.000Z"
-        },
-        {
-          "number": 408,
-          "occupants": [
-            {
-              "name": "Josefina Schowalter",
-              "phone": "921.739.4066",
-              "email": "Benton0@hotmail.com"
-            }
-          ],
-          "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2016-08-01T07:00:00.000Z"
-        },
-        {
-          "number": 409,
-          "occupants": [
-            {
-              "name": "Sheridan Torphy",
-              "phone": "1-502-544-6013 x88149",
-              "email": "Danyka_Tremblay15@yahoo.com"
-            }
-          ],
-          "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2016-12-01T08:00:00.000Z"
-        },
-        {
-          "number": 410,
-          "occupants": [
-            {
-              "name": "Miss Margarette Stehr",
-              "phone": "(522) 943-1038",
-              "email": "Dario78@yahoo.com"
-            }
-          ],
-          "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2016-10-01T07:00:00.000Z"
-        },
-        {
-          "number": 411,
-          "occupants": [
-            {
-              "name": "Fernando Goyette",
-              "phone": "1-193-211-2713",
-              "email": "Kory.Stroman5@gmail.com"
-            }
-          ],
-          "rentDue": "2016-08-01T07:00:00.000Z",
-          "leaseExpires": "2017-05-01T07:00:00.000Z"
-        },
-        {
-          "number": 412,
-          "occupants": [
-            {
-              "name": "April Streich",
-              "phone": "267-128-5638",
-              "email": "Laney.McClure95@gmail.com"
-            }
-          ],
-          "rentDue": "2016-07-01T07:00:00.000Z",
-          "leaseExpires": "2017-02-01T08:00:00.000Z"
+          "leaseExpires": "2016-11-01T07:00:00.000Z",
+          "serviceRequests": []
         }
       ]
     }
