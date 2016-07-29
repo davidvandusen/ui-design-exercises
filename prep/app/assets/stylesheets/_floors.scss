@@ -1,0 +1,78 @@
+// Depending on how many floors the `.building` has, the `top` property of each `.floor` needs to
+// be set differently. The goal is to have each floor evenly spaced along 100% of the height.
+// NOTE: This selector has a specificity of 3 classes, so to override it (to move a floor) the
+// overriding style needs to be both as specific and *after* these styles.
+@for $num-floors from $min-floors through $max-floors {
+  @for $floor-num from 1 through $num-floors {
+    .building-#{$num-floors}-floors .floor:nth-child(#{$num-floors - $floor-num + 1}) {
+      top: ((50% / ($num-floors + 1)) * $floor-num);
+    }
+  }
+}
+
+.floor {
+  background: rgba($theme-color-middark, 0.75);
+  border: 0.02vw solid $theme-color-middark;
+  box-sizing: border-box;
+  box-shadow: 0.4vw 0.4vw 0.4vw rgba(0, 0, 0, 0.1);
+  height: 25.625vw;
+  left: 40vw;
+  opacity: 0.75;
+  position: absolute;
+  transform: rotateX(45deg) rotateZ(45deg) translateY(-5%);
+  transition: all 0.4s 0s;
+  width: 47.5vw;
+
+  .building-view & {
+    &:hover,
+    &.focus {
+      border-color: $theme-color-light;
+      opacity: 1;
+      transform: rotateX(45deg) rotateZ(45deg) translateY(5%);
+    }
+  }
+
+  .floor-view &,
+  .unit-view & {
+    opacity: 0;
+    transform: rotateX(45deg) rotateZ(45deg) translateY(-300%);
+
+    &.active {
+      height: 51.25vw;
+      left: 0;
+      opacity: 1;
+      top: 0;
+      transform: rotateX(0deg) rotateZ(0deg) translateY(0);
+      width: 95vw;
+
+      .floor-number {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.floor-number {
+  bottom: 2vw;
+  color: rgb(255, 255, 255);
+  font-size: 4vw;
+  font-weight: bold;
+  left: 2vw;
+  line-height: 1;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  transition-duration: 0.25s;
+
+  span {
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+    font-size: 1.25vw;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  sup {
+    font-weight: normal;
+  }
+}

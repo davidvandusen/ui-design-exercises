@@ -60,7 +60,7 @@
   }
 
   function renderUI(building) {
-    $('#building-container').html(templates.building({
+    $('#main-content').html(templates.building({
       building: building
     }));
   }
@@ -114,6 +114,11 @@
       changeView(...view);
     }
 
+    function resetState() {
+      while (stateHistory.pop()) {}
+      changeView('building', null);
+    }
+
     function changeView(mode, el) {
       $rootEl.removeClass(getView());
       $rootEl.addClass(viewClass(mode));
@@ -126,14 +131,8 @@
       }
     }
 
-    function correspondingFloor(buildingFloor) {
-      const floorElIndex = $(buildingFloor).parent().find('.building-floor').index(buildingFloor);
-      return $('.floors .floor').eq(floorElIndex);
-    }
-
-    function correspondingBuildingFloor(floor) {
-      const floorElIndex = $(floor).parent().find('.floor').index(floor);
-      return $('.building-floors .building-floor').eq(floorElIndex);
+    function findCorresponding(selector, element) {
+      return $(selector).eq($(element).index());
     }
 
     $('.floor').on('click', function () {
@@ -144,19 +143,9 @@
       // Make it so that we can go back to this state
       saveState('floor', this);
     }).hover(function () {
-      $(correspondingBuildingFloor(this)).addClass('hover');
+      findCorresponding('.floors-overview-list-item', this).find('a').addClass('focus');
     }, function () {
-      $(correspondingBuildingFloor(this)).removeClass('hover');
-    });
-
-    $('.building-floor').on('click', function () {
-      var floorEl = correspondingFloor(this);
-      changeView('floor', floorEl);
-      saveState('floor', floorEl);
-    }).hover(function () {
-      $(correspondingFloor(this)).addClass('hover');
-    }, function () {
-      $(correspondingFloor(this)).removeClass('hover');
+      findCorresponding('.floors-overview-list-item', this).find('a').removeClass('focus');
     });
 
     $('.unit').on('click', function () {
@@ -169,6 +158,31 @@
     });
 
     $('.back-button').on('click', revertState);
+
+    $('.floors-overview a').on('click', function () {
+      findCorresponding('.floor', $(this).closest('.floors-overview-list-item')).trigger('click');
+    }).on('mouseenter focus', function () {
+      findCorresponding('.floor', $(this).closest('.floors-overview-list-item')).addClass('focus');
+    }).on('mouseleave blur', function () {
+      var $this = $(this);
+      if ($this.is(':focus')) return;
+      findCorresponding('.floor', $this.closest('.floors-overview-list-item')).removeClass('focus');
+    });
+
+    $(document).on('keyup', function (e) {
+      switch (e.which) {
+        // Escape
+        case 27:
+          resetState();
+          break;
+        // Backspace/Delete
+        case 8:
+        // Left arrow
+        case 37:
+          revertState();
+          break;
+      }
+    })
   }
 
   $(init);

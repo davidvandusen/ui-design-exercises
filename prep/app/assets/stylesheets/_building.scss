@@ -1,0 +1,52 @@
+.building {
+  background: $theme-color-dark;
+  height: 51.25vw;
+  left: 2.5vw;
+  overflow: hidden;
+  position: fixed;
+  top: 2.5vw;
+  width: 95vw;
+}
+
+.building-info {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30vw;
+
+  .building-view & {
+    left: 5vw;
+    opacity: 1;
+    transition: left 0.25s 0s, opacity 0.25s 0s, visibility 0s 0s;
+    visibility: visible;
+  }
+
+  .floor-view &,
+  .unit-view & {
+    left: -5vw;
+    opacity: 0;
+    transition: left 0.25s 0s, opacity 0.25s 0s, visibility 0s 0.25s;
+    visibility: hidden;
+  }
+}
+
+.building-info-address {
+  color: $theme-color-mid + 25;
+  font-size: 1.5vw;
+  line-height: 1.3;
+  margin: 0.75vw 0;
+  white-space: pre;
+}
+
+.building-info-heading {
+  font: bold 4vw/1 $base-font-family;
+  margin: 0;
+}
+
+.building-info-subhead {
+  color: $theme-color-mid;
+  font-size: 2vw;
+  font-weight: 200;
+  margin: 0.5vw 0;
+  text-transform: uppercase;
+}

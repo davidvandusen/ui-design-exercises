@@ -1,0 +1,40 @@
+// Mixins
+
+
+// Utility classes
+.badge {
+  background: $theme-color-midlight;
+  border: 0.01vw solid ($theme-color-midlight - 25);
+  border-radius: 50%;
+  box-shadow: 0 0.02vw 0.02vw rgba(0, 0, 0, 0.1);
+  display: block;
+  height: 1vw;
+  position: absolute;
+  right: -0.25vw;
+  top: -0.25vw;
+  width: 1vw;
+}
+
+.popup-content {
+  opacity: 0;
+  transition: opacity 0.25s 0s, visibility 0s 0.25s;
+  visibility: hidden;
+
+  .popup-label:focus + &,
+  .popup-label:hover + &,
+  .popup-label.focus + & {
+    opacity: 1;
+    transition: opacity 0.25s 0s, visibility 0s 0s;
+    visibility: visible;
+  }
+}
+
+// Animations
+@keyframes right-to-left-background {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}

@@ -1,0 +1,21 @@
+// Global
+body {
+  background: $theme-color-dark - 25;
+  color: rgb(255, 255, 255);
+  font-family: $base-font-family;
+  line-height: 1;
+}
+
+// Links
+a {
+  color: $theme-color-light;
+  text-decoration: none;
+}
+
+// Inline elements
+sup {
+  font-size: 66.666667%;
+  line-height: 1;
+}
+
+// Block elements

@@ -1,0 +1,44 @@
+.nav-main {
+  height: 56.25vw;
+  position: fixed;
+  top: 0;
+  width: 5vw;
+
+  .building-view & {
+    left: -5vw;
+    transition: left 0.25s 0s, visibility 0s 0.25s;
+    visibility: hidden;
+  }
+
+  .floor-view &,
+  .unit-view & {
+    left: 2.5vw;
+    transition: left 0.25s 0.3s, visibility 0s 0s;
+    visibility: visible;
+  }
+}
+
+.back-button {
+  animation: right-to-left-background 5s infinite;
+  background: linear-gradient(-110deg, rgba(0, 0, 0, 0.5) 45%, rgba(255, 255, 255, 0.5) 47.5%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.5) 52.5%, rgba(0, 0, 0, 0.5) 55%);
+  background-size: 1200% 1200%;
+  border: 0.02vw solid rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  font: normal 2vw/5vw $base-font-family;
+  height: 5vw;
+  left: 0;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 2.5vw;
+  transition: all 0.25s 0s;
+  width: 5vw;
+
+  &:focus,
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.75);
+    color: rgb(255, 255, 255);
+  }
+}

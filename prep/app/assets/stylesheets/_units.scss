@@ -1,0 +1,123 @@
+// Units are positioned absolutely on a grid based on their ordinal position. The `$unit-rows` and
+// `$unit-cols` variables can be modified to change the density of the grid. Units need to be
+// positioned absolutely to enable the desired animation effects.
+@for $row from 0 through ($unit-rows - 1) {
+  @for $col from 0 through ($unit-cols - 1) {
+    .unit:nth-child(#{$row * $unit-cols + $col + 1}) {
+      left: $col * (100% / $unit-cols);
+      top: $row * (100% / $unit-rows);
+    }
+  }
+}
+
+.unit {
+  border: 0.02vw solid;
+  box-sizing: border-box;
+  height: 100% / $unit-rows;
+  position: absolute;
+  transition: all 0.25s 0s;
+  width: 100% / $unit-cols;
+
+  .building-view & {
+    background: rgba($theme-color-midlight, 0.25);
+    border-color: rgba($theme-color-midlight, 0.675);
+  }
+
+  .floor-view & {
+    background: rgba($theme-color-midlight, 0.25);
+    border-color: rgba($theme-color-midlight, 0.3375);
+
+    .unit-number {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      background: rgba($theme-color-midlight, 0.5);
+      border-color: $theme-color-light;
+
+      .unit-number {
+        opacity: 1;
+      }
+    }
+
+    &.alert:after {
+      @extend .badge;
+      content: "";
+      right: 0.25vw;
+      top: 0.25vw;
+    }
+  }
+
+  .unit-view & {
+    background: rgba($theme-color-midlight, 0);
+    border-color: rgba($theme-color-midlight, 0);
+    opacity: 0;
+
+    &.active {
+      height: 100%;
+      left: 0;
+      opacity: 1;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
+
+.unit-number {
+  bottom: 1vw;
+  color: rgb(255, 255, 255);
+  font-size: 2vw;
+  font-weight: bold;
+  left: 1vw;
+  line-height: 1;
+  margin: 0;
+  position: absolute;
+  transition: font-size 0.25s 0s, margin-bottom 0.25s 0s, color 0.25s 0s, opacity 0.25s 0s;
+
+  .numero {
+    font-weight: normal;
+    margin-right: 0.25vw;
+    opacity: 0.5;
+  }
+
+  .building-view & {
+    opacity: 0;
+  }
+
+  .floor-view & {
+    opacity: 1;
+  }
+
+  .unit-view .unit.active & {
+    font-size: 4vw;
+    margin-bottom: 2.1vw;
+    opacity: 1;
+  }
+}
+
+.units {
+  position: absolute;
+  transition: all 0.25s 0s;
+
+  .building-view & {
+    bottom: 1vw;
+    left: 5vw;
+    right: 1vw;
+    top: 1vw;
+  }
+
+  .floor-view & {
+    bottom: 2vw;
+    left: 10vw;
+    right: 2vw;
+    top: 2vw;
+  }
+
+  .unit-view & {
+    bottom: 0;
+    left: 9vw;
+    right: 0;
+    top: 0;
+  }
+}

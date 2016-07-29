@@ -2,60 +2,60 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>CSS 3D Animation</title>
+  <title>Landlord Overview</title>
   <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body class="building-view">
-<div id="building-container"></div>
+<main id="main-content"></main>
 <nav class="nav-main">
   <button class="back-button">&#x25c0;</button>
 </nav>
 <script id="building-template" type="text/x-handlebars-template">
-  <div class="building floors-{{building.floors.length}}">
+  <div class="building building-{{building.floors.length}}-floors">
     <div class="building-info">
-      <div class="building-name">{{building.name}}</div>
-      <div class="building-built">Built {{building.built}}</div>
-      <div class="building-address">{{building.address}}</div>
-      <div class="building-floors">
-        <div class="building-floors-heading">Floors</div>
-        <div class="building-floors-list">
+      <h1 class="building-info-heading">{{building.name}}</h1>
+      <p class="building-info-subhead">Built {{building.built}}</p>
+      <p class="building-info-address">{{building.address}}</p>
+      <section class="floors-overview">
+        <h2 class="floors-overview-heading">Floors</h2>
+        <div class="floors-overview-list">
           {{#each building.floors}}
-            <div class="building-floor {{hasAlertsClass units}}">
-              <div class="building-floor-number">{{number}}</div>
-              <div class="building-floor-details">
-                <div class="floor-number-label">{{number}}<sup>{{ordinalSuffix number}}</sup> floor <span class="extra-info">({{units.length}} units)</span></div>
-                <div class="floor-units-rent-overdue"><span class="value">{{count units 'isRentDue'}}</span> rents due</div>
-                <div class="floor-units-lease-expiring"><span class="value">{{count units 'isLeaseExpiring'}}</span> leases expiring</div>
-              </div>
+          <div class="floors-overview-list-item">
+            <a class="popup-label {{hasAlertsClass units}}" href="javascript:void(0)">{{number}}</a>
+            <div class="popup-content">
+              <h3>{{number}}<sup>{{ordinalSuffix number}}</sup> floor <small>({{units.length}} units)</small></h3>
+              <ul>
+                <li><b>{{count units 'isRentDue'}}</b> rents due</li>
+                <li><b>{{count units 'isLeaseExpiring'}}</b> leases expiring</li>
+              </ul>
             </div>
+          </div>
           {{/each}}
         </div>
-      </div>
+      </section>
     </div>
     <div class="floors">
       {{#each building.floors}}
       <div class="floor">
-        <div class="floor-number">{{number}}<sup>{{ordinalSuffix number}}</sup></div>
+        <h2 class="floor-number">{{number}}<sup>{{ordinalSuffix number}}</sup> <span>floor</span></h2>
         <div class="units">
           {{#each units}}
           <div class="unit {{hasAlertsClass}}">
-            <div class="unit-number">{{number}}</div>
+            <h3 class="unit-number"><span class="numero">&#x2116;</span>{{number}}</h3>
             <div class="unit-details">
-              <div class="unit-details-occupants">
-                <div class="occupants-heading">Occupants</div>
-                <div class="occupants-list">
-                  {{#each occupants}}
-                  <div class="occupant-item">
-                    <div class="occupant-name">{{name}}</div>
-                    <div class="occupant-detail"><a href="callto:{{phone}}">{{phone}}</a></div>
-                    <div class="occupant-detail"><a href="mailto:{{email}}">{{email}}</a></div>
-                  </div>
-                  {{/each}}
-                </div>
-              </div>
               <div class="unit-details-admin">
-                <div class="unit-details-admin-item {{isLeaseExpiringClass}}"><span class="label">Lease expires</span> {{date leaseExpires}}</div>
-                <div class="unit-details-admin-item {{isRentDueClass}}"><span class="label">Rent due</span> {{date rentDue}}</div>
+                <p class="unit-details-admin-item {{isLeaseExpiringClass}}"><span class="label">Lease expires</span> {{date leaseExpires}}</p>
+                <p class="unit-details-admin-item {{isRentDueClass}}"><span class="label">Rent due</span> {{date rentDue}}</p>
+              </div>
+              <div class="occupants">
+                <h4 class="occupants-heading">Occupants</h4>
+                {{#each occupants}}
+                <div class="occupant">
+                  <h5 class="occupant-name">{{name}}</h5>
+                  <p class="occupant-detail"><a href="callto:{{phone}}">{{phone}}</a></p>
+                  <p class="occupant-detail"><a href="mailto:{{email}}">{{email}}</a></p>
+                </div>
+                {{/each}}
               </div>
             </div>
           </div>

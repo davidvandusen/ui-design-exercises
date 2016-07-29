@@ -1,0 +1,82 @@
+.occupant {
+  margin: 1vw 0 0;
+}
+
+.occupant-name {
+  font-size: 2vw;
+  font-weight: normal;
+  margin: 0 0 1vw;
+}
+
+.occupant-detail {
+  font-size: 1.5vw;
+  margin: 0.5vw 0 0;
+}
+
+.occupants-heading {
+  font-size: 1.5vw;
+  font-weight: normal;
+  margin: 0 0 2vw;
+  text-transform: uppercase;
+}
+
+.unit-details {
+  bottom: 8vw;
+  left: 1vw;
+  opacity: 0;
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
+  visibility: hidden;
+
+  .occupants {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+  }
+
+  .unit-view .unit.active & {
+    opacity: 1;
+    transition: visibility 0s 0.3s, opacity 0.25s 0.3s;
+    visibility: visible;
+  }
+}
+
+.unit-details-admin {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+}
+
+.unit-details-admin-item {
+  background: rgba(0, 0, 0, 0.25);
+  border: 0.02vw solid rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 1.75vw;
+  font-weight: 200;
+  margin: 1vw 4vw 1vw 2vw;
+  padding: 2vw;
+  position: relative;
+  transition: 0.25s;
+
+  &.alert:after {
+    @extend .badge;
+    content: "";
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+    border: 0.02vw solid rgba(0, 0, 0, 0.2);
+  }
+
+  .label {
+    color: $theme-color-mid;
+    display: inline-block;
+    font-weight: bold;
+    width: 40%;
+  }
+}
