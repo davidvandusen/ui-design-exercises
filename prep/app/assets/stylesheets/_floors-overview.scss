@@ -23,7 +23,7 @@
     background: $theme-color-dark - 15;
     color: $theme-color-light;
     font-size: 1.5vw;
-    font-weight: normal;
+    font-weight: 200;
     line-height: 1.5;
     left: 0;
     padding: 1.5vw;
@@ -32,7 +32,7 @@
     top: 3.75vw;
 
     h3 {
-      border-bottom: 0.02vw solid rgba(255, 255, 255, 0.125);
+      border-bottom: 0.03vw solid rgba(255, 255, 255, 0.125);
       color: rgb(255, 255, 255);
       font-size: inherit;
       font-weight: bold;
@@ -41,8 +41,8 @@
       padding: 0 0 0.75vw;
 
       small {
-        font-weight: 200;
         font-size: inherit;
+        font-weight: 200;
         margin: 0 0 0 0.5vw;
       }
     }
