@@ -354,20 +354,27 @@ sup {
   left: 1vw;
   line-height: 1;
   margin: 0;
+  opacity: 0;
   position: absolute;
-  transition: font-size 0.25s 0s, margin-bottom 0.25s 0s, color 0.25s 0s, opacity 0.25s 0s; }
+  visibility: visible; }
   .unit-number .numero {
     font-weight: normal;
     margin-right: 0.25vw;
     opacity: 0.5; }
   .building-view .unit-number {
-    opacity: 0; }
+    visibility: hidden; }
   .floor-view .unit-number {
-    opacity: 1; }
+    opacity: 1;
+    transition: opacity 0.25s 0.25s, visibility 0s 0s;
+    visibility: visible; }
+  .unit-view .unit-number {
+    visibility: hidden; }
   .unit-view .unit.active .unit-number {
     font-size: 4vw;
     margin-bottom: 2.1vw;
-    opacity: 1; }
+    opacity: 1;
+    transition: font-size 0.25s 0s, margin 0.25s 0s;
+    visibility: visible; }
 
 .units {
   position: absolute;
